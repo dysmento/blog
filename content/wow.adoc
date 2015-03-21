@@ -1,0 +1,18 @@
+Wow, AsciiDoc
+=============
+:date: 2015-03-20
+:category: Tech
+:tags: colophon, tech
+
+I think I want to start writing everything in AsciiDoc. It's real cool.
+
+I can include source code like this:
+
+[source,java]
+public static void main(String[] args) {
+  System.out.println("This is a useless program.");
+}
+
+This is going to allow me to write a bunch of things about technology.
+
+Ciao.
