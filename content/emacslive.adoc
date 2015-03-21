@@ -1,0 +1,19 @@
+Emacs Live
+==========
+:date: 2015-03-21
+:category: Tech
+:tags: emacs, clojure, tools
+
+Sam Aaron is an amazing guy. We owe him a debt of gratitude for creating http://sonic-pi.net/[Sonic Pi], which is a way of making music through programming, is distributed with every http://www.raspberrypi.org[Raspberry Pi], and is a fresh approach to teaching kids how to think in code while having a blast doing it.
+
+But I'm here to talk about http://overtone.github.io/emacs-live/[Emacs Live], which is a brilliant set of pre-configured packages that let you tap into the power of emacs very quickly.
+
+Emacs is an astonishingly powerful text editor (and many, many other things as well), but if you've ever been interested in trying it, you may have found -- as I did -- that it's very frustrating to start out not knowing anything, and feeling terribly unproductive. It's usually very difficult to push through that feeling that you're getting nowhere, and you should just get on back to TextMate (or Sublime Text, or Atom, or fill-in-the-blank).
+
+With Emacs Live, you get a ton of powerful capabilities to explore and you can get going right away with the excellent documentation. It's enough to get a toe-hold, so you can start building up your emacs powers.
+
+I found Emacs Live because I was interested in hacking in Clojure, and Emacs Live is geared toward that. You can start evaluating expressions in just a couple of minutes, and it's fun!
+
+I'm definitely still a newb, but I'm comfortable enough now that I can use emacs every day without feeling as though it's putting the brakes on in the middle of my workday.
+
+Give it a try, and thank you, Sam!
