@@ -7,6 +7,7 @@ SITENAME = u'@dysmento on the Web'
 SITEURL = ''
 
 PATH = 'content'
+STATIC_PATHS = ['images']
 
 TIMEZONE = 'Europe/Paris'
 

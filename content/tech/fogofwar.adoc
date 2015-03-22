@@ -1,0 +1,17 @@
+The Fog of War
+==============
+:date: 2015-03-21 19:46
+:tags: software engineering
+
+I enjoyed reading @jessitron's blog post http://blog.jessitron.com/2015/03/estimates-and-our-brain.html[Estimates and Our Brain]. Just about any software engineer will tell you that precisely predicting when we'll be finished with anything is virtually impossible. This is plenty frustrating for us, but it's even more vexing for the people who are not software developers, but have a vested interest in knowing when we're going to be done.
+
+The best treatment of this subject I have ever read is in the excellent book http://www.amazon.com/Waltzing-With-Bears-Managing-Software/dp/0932633609[Waltzing With Bears] by DeMarco and Lister (of Peopleware fame). This book deserves to be famous, but I haven't met too many people who know it.
+
+They have a great explanation for why we overrun our estimates so frequently: you can think of the range a possible completion dates as a probability distribution; each date under the curve has some non-zero chance of being the date. The point on the left-hand side of the curve where it meets the X-axis is special, because this is earliest date we could _possibly_ be finished. This is the best-case, and there is a vanishingly small chance that this is when we will actually finish. They call this the "nano-percent date". The trouble is that once we've come up with this date, everyone on the project treats it as the deadline. We have all but guaranteed we're going to miss the date.
+
+.The Estimation Probability Distribution
+image::/images/Nano.png[The completion-date probability curve.]
+
+I heard someone describe this (hilariously) as "the earliest date you can't prove you won't be finished." We don't do ourselves any favors by planning our projects according to wishful thinking. We also need leadership that can trust that we're not just trying to get out of doing our work by padding our estimates.
+
+Another favor we can all do ourselves is to read (or re-read) this book. It's distilled wisdom.

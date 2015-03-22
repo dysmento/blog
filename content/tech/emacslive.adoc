@@ -1,6 +1,7 @@
 Emacs Live
 ==========
 :date: 2015-03-21
+:slug: emacs-live
 :category: Tech
 :tags: emacs, clojure, tools
 

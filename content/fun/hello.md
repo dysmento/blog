@@ -1,5 +1,6 @@
 Title: Hello!
 Date: 2015-03-20
+Slug: hello
 
 ## @dysmento on the Web
 Hello, there! I am going to write about all sorts of things here, I hope!
