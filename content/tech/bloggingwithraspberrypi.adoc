@@ -5,9 +5,12 @@ Hosting a Blog on Raspberry Pi
 
 As of this writing, my blog is hosted entirely on a cute little http://www.raspberrypi.org[Raspberry Pi] downstairs in my family room. There are a million ways to publish a blog; I'll tell you how I did this one.
 
-I started with a Raspberry Pi running the stock OS, which is a Debian Linux variant called http://www.raspbian.org[Raspbian]. My Pi is headless, which means I don't have it hooked up to a monitor, or even a keyboard. It's got a power cable and a network cable, and that's it. Right out of the box, you can ssh to your little computer from _another_ computer as long as you know its IP address. I use my home router admin console to find out what the addresses of all the devices on my network. Once you have the address, you're ready to connect (this also assumes you have another computer on the network with a terminal program and an ssh program.
+Please note that this is not the easiest or the most reliable (or even cheapest) way to publish a blog. For that, just sign up at https://wordpress.com or https://www.blogger.com. Putting a blog on your Raspberry Pi is for you if you like DIY projects, you like making things work, and you don't mind your blog going offline when your cat pulls out the power cord.
+
+I started with a Raspberry Pi running the stock OS, which is a Debian Linux variant called http://www.raspbian.org[Raspbian]. My Pi is headless, which means I don't have it hooked up to a monitor, or even a keyboard. It's got a power cable and a network cable, and that's it. Right out of the box, you can ssh to your little computer from _another_ computer as long as you know its IP address. I use my home router admin console to find out the addresses of all the devices on my network. Once you have the address, you're ready to connect (this also assumes you have another computer on the network with a terminal program and an ssh program).
 
 [source,bash]
+# Your IP address is likely to be different from this.
 ssh pi@192.168.1.101
 
 You absolutely _must_ change the default password.
@@ -47,7 +50,7 @@ It'll ask you a few questions like what your blog is called, and what your web d
 [source,bash]
 nano content/hello-world.md
 
-Here I'm using nano, which is a simple text editor that's comes with the Pi, but you might choose another editor. That's also a topic for another post!
+Nano is a simple text editor that's comes with the Pi, but you might choose another editor. That's also a topic for another post! I actually write my posts on my laptop and copy them over to the pi for publishing, but that's an extra complication you don't have to deal with.
 
 Write your pages using http://daringfireball.net/projects/markdown/syntax[Markdown syntax], and make sure to save before you exit. Now, we generate the blog:
 
@@ -56,4 +59,10 @@ sudo pelican -o /var/www content
 
 With the `-o` argument, we're telling Pelican where the finished HTML, CSS, and supporting files should be written. `/var/www` is where lighttpd serves our content from.
 
-Now if you refresh your browser, you'll see the blog awesomeness! The Pelican docs are very good, so be sure to check those out. Have fun blogging!
+Now if you refresh your browser, you'll see the blog awesomeness! The Pelican docs are very good, so be sure to check those out.
+
+To get your blog out to the world, you need to use a fairly advanced feature of your home router called port forwarding. The way it works is that your home network has many internal addresses (each device on your network has its own address) but only _one_ address exposed to the global Internet. By default, all the devices on your network can see out to the Internet, but the Internet cannot see in (a bit like a two-way mirror). This is a good thing, because it protects your network from attacks and other mischief. But you want your blog to be visible to the world, so you need the Raspberry Pi exposed to the world. Specifically, you need to have your router forward all requests for port 80 (the port reserved for web traffic) to the IP address of your Pi. The details of how to do this will depend on the make and model of router you have, so use your router's documentation to get the steps to follow. Once it's working, you'll be able to view your blog using your external (to the world) IP address. If you don't know this address, go to http://www.whatismyip.com and it'll tell you.
+
+You're probably also going to want a domain name. While you can use an IP address directly in a web browser, people almost never do that, because IP addresses are not very readable or memorable. Registering your own domain name costs money, but you can get a _subdomain_ for free. A subdomain is when you piggyback off of someone else's domain name. For example, I don't own the sly.io domain, but its owner allows people to sign up for subdomains of it, so I chose the subdomain continuou.sly.io. You can sign up for one for free at http://freedns.afraid.org. You choose a domain, create a subdomain off of it, and then tell them what your (external) IP address is, and from then on you can use the domain in your browser (or give someone a link) instead of using the IP address.
+
+Have fun blogging!
