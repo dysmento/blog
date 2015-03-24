@@ -1,0 +1,59 @@
+Hosting a Blog on Raspberry Pi
+==============================
+:date: 2015-03-23 17:05
+:tags: colophon, raspberry pi
+
+As of this writing, my blog is hosted entirely on a cute little http://www.raspberrypi.org[Raspberry Pi] downstairs in my family room. There are a million ways to publish a blog; I'll tell you how I did this one.
+
+I started with a Raspberry Pi running the stock OS, which is a Debian Linux variant called http://www.raspbian.org[Raspbian]. My Pi is headless, which means I don't have it hooked up to a monitor, or even a keyboard. It's got a power cable and a network cable, and that's it. Right out of the box, you can ssh to your little computer from _another_ computer as long as you know its IP address. I use my home router admin console to find out what the addresses of all the devices on my network. Once you have the address, you're ready to connect (this also assumes you have another computer on the network with a terminal program and an ssh program.
+
+[source,bash]
+ssh pi@192.168.1.101
+
+You absolutely _must_ change the default password.
+
+[source,bash]
+passwd
+
+Now you're ready to get some blog software. I like to create a statically-generated blog. This means that your pages are all created in advance, and are not assembled by a programming framework every time a request is made. This makes the site faster, handle more traffic, and keeps you from having to mess around with programming or setting up a database to get your blog.
+
+The first thing I installed was a web server. I chose lighttpd because it's easy to get started.
+
+[source,bash]
+sudo apt-get -y install lighttpd
+
+And just like that, you'll be serving web pages from your Pi. You can visit it in a browser at http://<your-ip-address>/ Lighttpd starts out with just a starter page, which we'll be replacing soon. All the pages for your blog will be stored in `/var/www`.
+
+Next, we need some software that can generate blog pages for you. I tried https://pypi.python.org/pypi/hyde/0.8.8[Hyde] but didn't end up loving it. I'm currently rocking http://pelican.readthedocs.org/en/3.5.0[Pelican], which is really cool so far. We'll install Pelican with a package manager called pip. We need to get pip first:
+
+[source,bash]
+wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+sudo python get-pip.py
+
+Now, Pelican:
+
+[source,bash]
+sudo pip install pelican markdown
+
+Now we'll use Pelican to make a blog. First we create a directory (I'll call it super-blog), then use Pelican to make the _sources_ for our blog.
+
+[source,bash]
+mkdir super-blog
+cd super-blog
+pelican-quickstart
+
+It'll ask you a few questions like what your blog is called, and what your web domain is (if you have one; that's a topic for another post). Now create your first post. You'll put your pages in the `content` directory inside your blog directory.
+
+[source,bash]
+nano content/hello-world.md
+
+Here I'm using nano, which is a simple text editor that's comes with the Pi, but you might choose another editor. That's also a topic for another post!
+
+Write your pages using http://daringfireball.net/projects/markdown/syntax[Markdown syntax], and make sure to save before you exit. Now, we generate the blog:
+
+[source,bash]
+sudo pelican -o /var/www content
+
+With the `-o` argument, we're telling Pelican where the finished HTML, CSS, and supporting files should be written. `/var/www` is where lighttpd serves our content from.
+
+Now if you refresh your browser, you'll see the blog awesomeness! The Pelican docs are very good, so be sure to check those out. Have fun blogging!
