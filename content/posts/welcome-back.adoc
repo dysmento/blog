@@ -1,0 +1,10 @@
+---
+title: "Welcome Back"
+date: 2025-02-03T13:33:33-05:00
+draft: false
+---
+
+How time flies! It's been eight years since my last post! Since the internet is well on its way to being
+covered in rot, I've decided to take back the means of production. What does that mean? It means I don't
+want to host my content for the benefit of Zuckerberg, Musk, Pichai. People didn't realize that on all
+these social media, the reason it was free is that _they_ were the product, and it has gotten pretty bad.

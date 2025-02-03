@@ -1,8 +1,12 @@
-Hosting a Blog on Raspberry Pi
-==============================
-:date: 2015-03-23 17:05
-:tags: colophon, raspberry pi
-
+---
+title: "Hosting a Blog on Raspberry Pi"
+slug: blogging-with-raspberry-pi
+date: 2015-03-23T17:05:00.00Z
+tags: ["colophon", "raspberry pi"]
+categories: ["tech"]
+draft: false
+---
+== Hosting a Blog on Raspberry Pi
 As of this writing, my blog is hosted entirely on a cute little http://www.raspberrypi.org[Raspberry Pi] downstairs in my family room. There are a million ways to publish a blog; I'll tell you how I did this one.
 
 Please note that this is not the easiest or the most reliable (or even cheapest) way to publish a blog. For that, just sign up at https://wordpress.com or https://www.blogger.com. Putting a blog on your Raspberry Pi is for you if you like DIY projects, you like making things work, and you don't mind your blog going offline when your cat pulls out the power cord.

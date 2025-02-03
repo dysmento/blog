@@ -1,0 +1,30 @@
+---
+title: "Studying for the AWS Solutions Architect Professional Cert"
+slug: aws-professional-cert
+date: 2017-12-07
+tags: ["aws", "certification"]
+categories: ["tech"]
+draft: false
+---
+
+I’ve been studying to take the https://aws.amazon.com/certification/certified-solutions-architect-professional/[AWS Solutions Architect Professional] exam, and it is hard.
+
+I’ve been good at test-taking in the past, but I’m not going to just skate through this one. I took the practice exam they have for $40, and I bombed it pretty hard. But they did identify areas of weakness to enable me to focus my study.
+
+Here’s a partial list of topics you have to know well to get this certification:
+
+* EC2
+* Storage Gateway
+* Route 53
+* CloudFront
+* CloudFormation
+* Elastic Load Balancer
+* IAM
+* VPC
+* Direct Connect
+* RDS
+* KMS
+* DynamoDB
+* Directory Service
+
+I’ll be sitting the exam on December 15th. Wish me luck!

@@ -1,6 +1,9 @@
-Title: Hello!
-Date: 2015-03-20
-Slug: hello
++++
+title = 'Hello!'
+date = 2015-03-20
+draft = false
+slug = 'hello'
++++
 
 ## @dysmento on the Web
 Hello, there! I am going to write about all sorts of things here, I hope!

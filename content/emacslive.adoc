@@ -1,9 +1,11 @@
-Emacs Live
-==========
-:date: 2015-03-21
-:slug: emacs-live
-:category: Tech
-:tags: emacs, clojure, tools
+---
+title: "Emacs Live"
+date: 2015-03-21
+tags: ["emacs", "clojure", "tools"]
+slug: emacs-live
+categories: ["tech"]
+draft: false
+---
 
 Sam Aaron is an amazing guy. We owe him a debt of gratitude for creating http://sonic-pi.net/[Sonic Pi], which is a way of making music through programming, is distributed with every http://www.raspberrypi.org[Raspberry Pi], and is a fresh approach to teaching kids how to think in code while having a blast doing it.
 

@@ -1,7 +1,11 @@
-The Fog of War
-==============
-:date: 2015-03-21 19:46
-:tags: software engineering
+---
+title: "The Fog of War"
+slug: fog-of-war
+date: 2015-03-21T19:46:00.000Z
+tags: ["software engineering"]
+categories: ["tech"]
+draft: false
+---
 
 I enjoyed reading @jessitron's blog post http://blog.jessitron.com/2015/03/estimates-and-our-brain.html[Estimates and Our Brain]. Just about any software engineer will tell you that precisely predicting when we'll be finished with anything is virtually impossible. This is plenty frustrating for us, but it's even more vexing for the people who are not software developers, but have a vested interest in knowing when we're going to be done.
 

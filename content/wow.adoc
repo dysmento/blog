@@ -1,9 +1,11 @@
-Wow, AsciiDoc
-=============
-:date: 2015-03-20
-:slug: wow-asciidoc
-:category: Tech
-:tags: colophon, tech
+---
+title: "Wow, AsciiDoc"
+slug: wow-asciidoc
+date: 2015-03-20
+tags: ["colophon", "tech"]
+categories: ["Tech"]
+draft: false
+---
 
 I think I want to start writing everything in AsciiDoc. It's real cool.
 
